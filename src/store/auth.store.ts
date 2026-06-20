@@ -1,33 +1,38 @@
-import {create} from 'zustand';
-import {persist} from 'zustand/middleware';
+"use client";
+
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 interface User {
-    id: number;
-    email: string;
-    name: string;
+  id: number;
+  email: string;
+  username: string;
+  firstName: string;
+  lastName: string;
+  isVerifiedAuthor: boolean;
 }
 
 interface AuthState {
-    user: User | null;
-    accessToken: string | null;
-    isAuthenticated: boolean;
-    setAuth: (user: User, token: string) => void;
-    logout: () => void;
+  user: User | null;
+  accessToken: string | null;
+  isAuthenticated: boolean;
+  setAuth: (user: User, token: string) => void;
+  logout: () => void;
 }
 
 export const useAuthStore = create<AuthState>()(
-    persist(
-        (set) => ({
-            user: null,
-            accessToken: null,
-            isAuthenticated: false,
+  persist(
+    (set) => ({
+      user: null,
+      accessToken: null,
+      isAuthenticated: false,
 
-            setAuth: (user, accessToken) =>
-                set({user, accessToken, isAuthenticated: true}),
+      setAuth: (user, accessToken) =>
+        set({ user, accessToken, isAuthenticated: true }),
 
-            logout: () =>
-                set({user: null, accessToken: null, isAuthenticated: false}),
-        }),
-        {name: 'auth-storage'}
-    )
+      logout: () =>
+        set({ user: null, accessToken: null, isAuthenticated: false }),
+    }),
+    { name: "songstory-auth" },
+  ),
 );

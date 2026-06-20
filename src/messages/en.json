@@ -1,1 +1,19 @@
-
+{
+  "nav": {
+    "catalog": "Catalog",
+    "books": "Books",
+    "library": "Library",
+    "playlists": "Playlists"
+  },
+  "auth": {
+    "login": "Log in",
+    "logout": "Log out",
+    "signup": "Sign up",
+    "member": "Member",
+    "author": "Author"
+  },
+  "player": {
+    "open": "Open",
+    "close": "Close player"
+  }
+}
