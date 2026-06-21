@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Bookmark, BookmarkCheck, ListMusic } from "lucide-react";
 import { StarRating } from "@/components/ui/StarRating";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/Button/Button";
 import { booksService } from "@/lib/api/services/books.service";
 import { useAuthStore } from "@/store/auth.store";
 

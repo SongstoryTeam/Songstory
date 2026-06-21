@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/Button/Button";
 import { playlistsService } from "@/lib/api/services/playlists.service";
 
 interface ChapterOption {

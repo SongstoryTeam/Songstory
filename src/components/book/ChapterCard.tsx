@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Music, ChevronRight } from "lucide-react";
-import { Badge } from "@/components/ui/Badge";
+import { Badge } from "@/components/ui/Badge/Badge";
 import type { Chapter } from "@/types";
 
 interface ChapterCardProps {

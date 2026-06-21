@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Bookmark, Music, ListMusic, Heart, LogOut } from "lucide-react";
-import { Avatar } from "@/components/ui/Avatar";
+import { Avatar } from "@/components/ui/Avatar/Avatar";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { useAuthStore } from "@/store/auth.store";
 

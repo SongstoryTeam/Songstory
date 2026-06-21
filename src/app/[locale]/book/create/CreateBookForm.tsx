@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/Button/Button";
 import axiosInstance from "@/lib/api/axios.instance";
 import { ENDPOINTS } from "@/lib/api/endpoints";
 

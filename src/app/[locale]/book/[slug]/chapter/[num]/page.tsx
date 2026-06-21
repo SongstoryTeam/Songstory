@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { MusicCard } from "@/components/music/MusicCard";
 import { Comments } from "@/components/ui/Comments";
-import { VerifiedBadge } from "@/components/ui/Badge";
+import { VerifiedBadge } from "@/components/ui/Badge/Badge";
 import { serverFetch } from "@/lib/api/server-fetch";
 
 interface ApiBook {

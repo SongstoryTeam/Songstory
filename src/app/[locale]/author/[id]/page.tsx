@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { Avatar } from "@/components/ui/Avatar";
-import { VerifiedBadge } from "@/components/ui/Badge";
+import { Avatar } from "@/components/ui/Avatar/Avatar";
+import { VerifiedBadge } from "@/components/ui/Badge/Badge";
 import { BookCard } from "@/components/book/BookCard";
 import { serverFetch } from "@/lib/api/server-fetch";
 import { FollowButton } from "./FollowButton";

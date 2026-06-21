@@ -1,0 +1,199 @@
+.player {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: var(--sidebar-width);
+    z-index: var(--z-player);
+    display: flex;
+    flex-direction: column;
+    background: var(--color-player-bg);
+    border-top: 2px solid var(--color-accent);
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-shrink: 0;
+    height: 3.25rem;
+    padding-inline: var(--space-4);
+}
+
+.dot {
+    flex-shrink: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: var(--radius-full);
+    transition: background var(--duration-fast) var(--ease-default);
+}
+
+.meta {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    flex: 1;
+    min-width: 0;
+}
+
+.title {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    line-height: var(--leading-tight);
+    color: var(--color-white);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artist {
+    font-size: 0.6875rem;
+    color: rgb(var(--color-white-rgb) / 0.45);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.platform {
+    flex-shrink: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.625rem;
+    font-weight: var(--weight-medium);
+    color: rgb(var(--color-white-rgb) / 0.3);
+}
+
+.openLink {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1-5);
+    flex-shrink: 0;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    border: 1px solid rgb(var(--color-white-rgb) / 0.12);
+    font-size: 0.71875rem;
+    font-weight: var(--weight-medium);
+    color: rgb(var(--color-white-rgb) / 0.55);
+    transition: color var(--duration-fast) var(--ease-default),
+    border-color var(--duration-fast) var(--ease-default);
+}
+
+.openLink:hover {
+    color: var(--color-white);
+    border-color: rgb(var(--color-white-rgb) / 0.35);
+}
+
+.closeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgb(var(--color-white-rgb) / 0.08);
+    color: rgb(var(--color-white-rgb) / 0.4);
+    transition: color var(--duration-fast) var(--ease-default),
+    border-color var(--duration-fast) var(--ease-default),
+    background var(--duration-fast) var(--ease-default);
+}
+
+.closeButton:hover {
+    color: var(--color-white);
+    border-color: rgb(var(--color-white-rgb) / 0.18);
+    background: rgb(var(--color-white-rgb) / 0.07);
+}
+
+.embedSpotify {
+    position: relative;
+    flex-shrink: 0;
+    height: 9.5rem;
+    overflow: hidden;
+    background: var(--color-player-bg);
+}
+
+.spotifyIcon {
+    color: var(--color-platform-spotify);
+}
+
+.embedSoundcloud {
+    flex-shrink: 0;
+    height: 10.375rem;
+    overflow: hidden;
+    background: var(--color-player-bg);
+}
+
+.embedYoutube {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    height: 5rem;
+    overflow: hidden;
+    background: var(--color-player-bg);
+}
+
+.youtubeThumb {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    filter: blur(4px);
+    pointer-events: none;
+}
+
+.youtubeOverlay {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding-inline: var(--space-4);
+}
+
+.youtubePlayIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--radius-full);
+    background: rgb(var(--color-platform-youtube-rgb) / 0.85);
+    color: var(--color-white);
+}
+
+.youtubeLink {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    color: rgb(var(--color-white-rgb) / 0.85);
+    transition: color var(--duration-fast) var(--ease-default);
+}
+
+.youtubeLink:hover {
+    color: var(--color-white);
+}
+
+.fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: var(--space-3);
+}
+
+.fallbackLink {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    color: rgb(var(--color-white-rgb) / 0.7);
+    transition: color var(--duration-fast) var(--ease-default);
+}
+
+.fallbackLink:hover {
+    color: var(--color-white);
+}

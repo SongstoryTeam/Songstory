@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/Button/Button";
 import { authService } from "@/lib/api/services/playlists.service";
 import { useAuthStore } from "@/store/auth.store";
 

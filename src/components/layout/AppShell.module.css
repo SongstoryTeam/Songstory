@@ -1,0 +1,43 @@
+.sidebarSpacer {
+    display: none;
+    width: var(--sidebar-width);
+    flex-shrink: 0;
+}
+
+.sidebarDesktop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: var(--z-sidebar);
+}
+
+.sidebarMobile {
+    display: block;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.main {
+    flex: 1;
+}
+
+@media (min-width: 1024px) {
+    .sidebarSpacer {
+        display: block;
+    }
+
+    .sidebarDesktop {
+        display: flex;
+    }
+
+    .sidebarMobile {
+        display: none;
+    }
+}

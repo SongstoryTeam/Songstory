@@ -1,0 +1,149 @@
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-topbar);
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+    flex-shrink: 0;
+    height: var(--topbar-height);
+    padding-inline: var(--space-5);
+    background: rgb(247 244 239 / 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+}
+
+@media (min-width: 1024px) {
+    .topbar {
+        padding-inline: var(--space-9);
+    }
+}
+
+.menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    color: var(--color-ink);
+    transition: background var(--duration-fast) var(--ease-default);
+}
+
+.menuButton:hover {
+    background: var(--color-surface);
+}
+
+@media (min-width: 1024px) {
+    .menuButton {
+        display: none;
+    }
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex: 1;
+    max-width: 20rem;
+    height: 2.375rem;
+    padding-inline: var(--space-4);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    transition: box-shadow var(--duration-fast) var(--ease-default);
+}
+
+.search:focus-within {
+    box-shadow: var(--shadow-sm);
+}
+
+.searchIcon {
+    flex-shrink: 0;
+    color: var(--color-muted);
+}
+
+.searchInput {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: var(--text-sm);
+    color: var(--color-ink);
+}
+
+.spacer {
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.iconButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-border);
+    color: var(--color-muted);
+    transition: background var(--duration-fast) var(--ease-default);
+}
+
+.iconButton:hover {
+    background: var(--color-surface);
+}
+
+.createButton {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1-5);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    background: var(--color-accent);
+    color: var(--color-white);
+    box-shadow: var(--shadow-accent);
+    transition: transform var(--duration-fast) var(--ease-default);
+}
+
+.createButton:hover {
+    transform: translateY(-1px);
+}
+
+.loginLink,
+.signupLink {
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    transition: background var(--duration-fast) var(--ease-default),
+    transform var(--duration-fast) var(--ease-default);
+}
+
+.loginLink {
+    border: 1px solid var(--color-border);
+    color: var(--color-muted);
+}
+
+.loginLink:hover {
+    background: var(--color-surface);
+    border-color: var(--color-ink);
+}
+
+.signupLink {
+    background: var(--color-accent);
+    color: var(--color-white);
+    box-shadow: var(--shadow-accent);
+}
+
+.signupLink:hover {
+    transform: translateY(-1px);
+}

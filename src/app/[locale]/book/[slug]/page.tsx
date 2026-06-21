@@ -3,7 +3,7 @@ import { Eye, Calendar, BookOpen, Star, ListMusic, Plus } from "lucide-react";
 import { BookCover } from "@/components/book/BookCover";
 import { ChapterCard } from "@/components/book/ChapterCard";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { VerifiedBadge } from "@/components/ui/Badge";
+import { VerifiedBadge } from "@/components/ui/Badge/Badge";
 import { serverFetch } from "@/lib/api/server-fetch";
 import { BookDetailClient } from "./BookDetailClient";
 

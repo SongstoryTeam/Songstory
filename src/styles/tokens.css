@@ -1,0 +1,133 @@
+:root {
+    /* Color — neutrals & surfaces */
+    --color-bg: #f7f4ef;
+    --color-surface: #ffffff;
+    --color-border: #e2ddd6;
+    --color-shelf: #c8bfb0;
+
+    --color-ink: #1a1612;
+    --color-ink-rgb: 26 22 18;
+    --color-muted: #7a7167;
+    --color-body-text: #4a4340;
+
+    --color-white: #ffffff;
+    --color-white-rgb: 255 255 255;
+    --color-black-rgb: 0 0 0;
+
+    --color-cover-placeholder-start: #e8e0d5;
+    --color-cover-placeholder-end: #d4c9bc;
+
+    /* Color — brand */
+    --color-accent: #c4622d;
+    --color-accent-rgb: 196 98 45;
+    --color-accent-hover: #b3561f;
+    --color-accent-soft: #f2e8e0;
+    --color-accent-soft-strong: #fef0eb;
+
+    /* Color — semantic */
+    --color-success: #3a6b4a;
+
+    --color-danger: #c0392b;
+    --color-danger-rgb: 192 57 43;
+    --color-danger-soft: #fdf1f0;
+    --color-danger-strong: #962d22;
+
+    --color-gold: #e8a020;
+    --color-gold-rgb: 232 160 32;
+
+    /* Color — player surface & streaming platform brands */
+    --color-player-bg: #1c1917;
+
+    --color-platform-youtube: #ff0000;
+    --color-platform-youtube-rgb: 255 0 0;
+    --color-platform-spotify: #1db954;
+    --color-platform-spotify-rgb: 29 185 84;
+    --color-platform-soundcloud: #ff5500;
+    --color-platform-soundcloud-rgb: 255 85 0;
+
+    /* Typography */
+    --font-display: var(--font-playfair), Georgia, serif;
+    --font-body: var(--font-dm-sans), system-ui, sans-serif;
+
+    --text-2xs: 0.6875rem;
+    --text-xs: 0.75rem;
+    --text-sm: 0.8125rem;
+    --text-base: 0.9375rem;
+    --text-md: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.375rem;
+    --text-2xl: 1.625rem;
+    --text-3xl: 2rem;
+    --text-hero: clamp(1.875rem, 4.5vw, 3rem);
+
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+
+    --leading-tight: 1.2;
+    --leading-snug: 1.4;
+    --leading-relaxed: 1.6;
+
+    /* Spacing — 0.25rem step scale */
+    --space-0-5: 0.125rem;
+    --space-1: 0.25rem;
+    --space-1-5: 0.375rem;
+    --space-2: 0.5rem;
+    --space-2-5: 0.625rem;
+    --space-3: 0.75rem;
+    --space-3-5: 0.875rem;
+    --space-4: 1rem;
+    --space-4-5: 1.125rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-7: 1.75rem;
+    --space-8: 2rem;
+    --space-9: 2.25rem;
+    --space-10: 2.5rem;
+    --space-11: 2.75rem;
+    --space-12: 3rem;
+    --space-14: 3.5rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+
+    /* Radius */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1.25rem;
+    --radius-xl: 2rem;
+    --radius-full: 9999px;
+
+    /* Shadow */
+    --shadow-sm: 0 1px 3px rgb(var(--color-ink-rgb) / 0.07), 0 1px 2px rgb(var(--color-ink-rgb) / 0.05);
+    --shadow-md: 0 4px 12px rgb(var(--color-ink-rgb) / 0.10), 0 2px 4px rgb(var(--color-ink-rgb) / 0.06);
+    --shadow-lg: 0 12px 32px rgb(var(--color-ink-rgb) / 0.13), 0 4px 10px rgb(var(--color-ink-rgb) / 0.07);
+    --shadow-cover: 4px 4px 12px rgb(var(--color-ink-rgb) / 0.18), inset -3px 0 6px rgb(var(--color-black-rgb) / 0.1);
+    --shadow-accent: 0 2px 8px rgb(var(--color-accent-rgb) / 0.3);
+
+    /* Layout */
+    --sidebar-width: 15rem;
+    --topbar-height: 3.75rem;
+    --page-max-width: 860px;
+    --page-max-width-wide: 1024px;
+
+    /* Motion */
+    --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+    --duration-fast: 150ms;
+    --duration-base: 200ms;
+    --duration-slow: 250ms;
+
+    /* Z-index scale */
+    --z-topbar: 50;
+    --z-overlay: 99;
+    --z-sidebar: 100;
+    --z-player: 200;
+}
+
+/*
+ * Breakpoint reference. CSS custom properties cannot be interpolated
+ * inside @media conditions, so every module that needs this value
+ * repeats the literal 1024px explicitly — keep them in sync with this.
+ */
+:root {
+    --bp-lg-reference: 1024px;
+}

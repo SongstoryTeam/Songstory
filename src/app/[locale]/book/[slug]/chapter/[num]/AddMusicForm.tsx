@@ -4,7 +4,7 @@ import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/Button/Button";
 import { musicService, type AddMusicPayload } from "@/lib/api/services/chapters.service";
 import { youtubeService, type YouTubeResult } from "@/lib/api/services/youtube.service";
 import { useDebouncedCallback } from "@/lib/hooks";
