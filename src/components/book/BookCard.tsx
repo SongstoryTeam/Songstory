@@ -2,9 +2,15 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import {useTranslations} from "next-intl";
 import {motion} from "framer-motion";
 import type {Book} from "@/types";
 import styles from "./BookCard.module.css";
+
+const COVER_HOVER = {y: -6, rotate: -1};
+const COVER_TRANSITION = {duration: 0.2, ease: [0.4, 0, 0.2, 1] as const};
+const COVER_SIZES = "(max-width: 768px) 100px, 130px";
+const NO_COVER_TRIM = 40;
 
 interface BookCardProps {
     book: Pick<Book, "id" | "slug" | "title" | "author" | "coverUrl">;
@@ -12,6 +18,7 @@ interface BookCardProps {
 }
 
 export function BookCard({book, locale}: BookCardProps) {
+    const t = useTranslations("book");
     const href = `/${locale}/book/${book.slug || book.id}`;
 
     return (
@@ -19,16 +26,16 @@ export function BookCard({book, locale}: BookCardProps) {
             <div className={styles.coverWrap}>
                 <motion.div
                     className={styles.coverInner}
-                    whileHover={{y: -6, rotate: -1}}
-                    transition={{duration: 0.2, ease: [0.4, 0, 0.2, 1]}}
+                    whileHover={COVER_HOVER}
+                    transition={COVER_TRANSITION}
                 >
                     <div className={styles.cover}>
                         {book.coverUrl ? (
                             <Image
                                 src={book.coverUrl}
-                                alt={`${book.title} cover`}
+                                alt={t("coverAlt", {title: book.title})}
                                 fill
-                                sizes="(max-width: 768px) 100px, 130px"
+                                sizes={COVER_SIZES}
                                 className={styles.coverImage}
                                 onError={(e) => {
                                     (e.currentTarget as HTMLImageElement).style.display = "none";
@@ -52,5 +59,5 @@ export function BookCard({book, locale}: BookCardProps) {
 }
 
 function NoCover({title}: { title: string }) {
-    return <div className={styles.noCover}>{title.slice(0, 40)}</div>;
+    return <div className={styles.noCover}>{title.slice(0, NO_COVER_TRIM)}</div>;
 }

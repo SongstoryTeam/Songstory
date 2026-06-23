@@ -1,0 +1,32 @@
+.wrap {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.star {
+    background: none;
+    border: none;
+    padding: 2px;
+    line-height: 1;
+    color: var(--color-border);
+    transition:
+        color var(--duration-fast) var(--ease-default),
+        transform var(--duration-fast) var(--ease-default);
+}
+
+.star[data-readonly] {
+    cursor: default;
+}
+
+.star:not([data-readonly]) {
+    cursor: pointer;
+}
+
+.star[data-filled] {
+    color: var(--color-gold);
+}
+
+.star[data-hover] {
+    transform: scale(1.15);
+}

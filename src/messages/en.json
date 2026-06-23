@@ -3,17 +3,79 @@
     "catalog": "Catalog",
     "books": "Books",
     "library": "Library",
-    "playlists": "Playlists"
+    "playlists": "Playlists",
+    "appName": "Songstory",
+    "appTagline": "Books & Music",
+    "closeMenu": "Close menu",
+    "mainNav": "Navigation",
+    "navHeading": "Browse",
+    "breadcrumbs": "Breadcrumb"
   },
   "auth": {
-    "login": "Log in",
-    "logout": "Log out",
+    "login": "Sign in",
+    "logout": "Sign out",
     "signup": "Sign up",
-    "member": "Member",
-    "author": "Author"
+    "roleAuthor": "Author",
+    "roleMember": "Member"
+  },
+  "topbar": {
+    "openMenu": "Open menu",
+    "searchPlaceholder": "Search books or authors…",
+    "searchLabel": "Search",
+    "notifications": "Notifications",
+    "addBook": "Add book",
+    "login": "Sign in",
+    "signup": "Sign up"
+  },
+  "book": {
+    "coverAlt": "Cover of «{title}»"
+  },
+  "chapter": {
+    "pendingLabel": "Pending review",
+    "musicCountLabel": "{count} tracks"
+  },
+  "music": {
+    "playLabel": "Play",
+    "likeLabel": "Like",
+    "unlikeLabel": "Unlike",
+    "deleteLabel": "Delete",
+    "platform": {
+      "youtube": "YouTube",
+      "spotify": "Spotify",
+      "soundcloud": "SoundCloud",
+      "other": "Listen"
+    }
   },
   "player": {
-    "open": "Open",
-    "close": "Close player"
+    "regionLabel": "Music player",
+    "openLabel": "Open",
+    "closeLabel": "Close player",
+    "spotifyPlayerTitle": "Spotify player",
+    "openInSpotify": "Open in Spotify",
+    "soundcloudPlayerTitle": "SoundCloud player",
+    "openOnYoutube": "{title} — open on YouTube",
+    "platform": {
+      "youtube": "YouTube",
+      "spotify": "Spotify",
+      "soundcloud": "SoundCloud",
+      "other": "Link"
+    }
+  },
+  "badges": {
+    "verifiedAuthor": "Verified author"
+  },
+  "moods": {
+    "epic": "Epic",
+    "sad": "Melancholic",
+    "calm": "Calm",
+    "tense": "Tense",
+    "romantic": "Romantic",
+    "dark": "Dark",
+    "uplifting": "Uplifting",
+    "mysterious": "Mysterious"
+  },
+  "starRating": {
+    "starLabel": "Rate {star} out of 5",
+    "ratingLabel": "Rating: {value} out of 5"
   }
 }

@@ -3,17 +3,79 @@
     "catalog": "Каталог",
     "books": "Книги",
     "library": "Бібліотека",
-    "playlists": "Плейлісти"
+    "playlists": "Плейлісти",
+    "appName": "Songstory",
+    "appTagline": "Книги та музика",
+    "closeMenu": "Закрити меню",
+    "mainNav": "Навігація",
+    "navHeading": "Огляд",
+    "breadcrumbs": "Навігація"
   },
   "auth": {
     "login": "Увійти",
     "logout": "Вийти",
     "signup": "Реєстрація",
-    "member": "Учасник",
-    "author": "Автор"
+    "roleAuthor": "Автор",
+    "roleMember": "Учасник"
+  },
+  "topbar": {
+    "openMenu": "Відкрити меню",
+    "searchPlaceholder": "Пошук книг або авторів…",
+    "searchLabel": "Пошук",
+    "notifications": "Сповіщення",
+    "addBook": "Додати книгу",
+    "login": "Увійти",
+    "signup": "Реєстрація"
+  },
+  "book": {
+    "coverAlt": "Обкладинка «{title}»"
+  },
+  "chapter": {
+    "pendingLabel": "На розгляді",
+    "musicCountLabel": "{count} треків"
+  },
+  "music": {
+    "playLabel": "Відтворити",
+    "likeLabel": "Подобається",
+    "unlikeLabel": "Більше не подобається",
+    "deleteLabel": "Видалити",
+    "platform": {
+      "youtube": "YouTube",
+      "spotify": "Spotify",
+      "soundcloud": "SoundCloud",
+      "other": "Слухати"
+    }
   },
   "player": {
-    "open": "Відкрити",
-    "close": "Закрити плеєр"
+    "regionLabel": "Музичний плеєр",
+    "openLabel": "Відкрити",
+    "closeLabel": "Закрити плеєр",
+    "spotifyPlayerTitle": "Spotify плеєр",
+    "openInSpotify": "Відкрити в Spotify",
+    "soundcloudPlayerTitle": "SoundCloud плеєр",
+    "openOnYoutube": "{title} — відкрити на YouTube",
+    "platform": {
+      "youtube": "YouTube",
+      "spotify": "Spotify",
+      "soundcloud": "SoundCloud",
+      "other": "Link"
+    }
+  },
+  "badges": {
+    "verifiedAuthor": "Підтверджений автор"
+  },
+  "moods": {
+    "epic": "Епічний",
+    "sad": "Меланхолійний",
+    "calm": "Спокійний",
+    "tense": "Напружений",
+    "romantic": "Романтичний",
+    "dark": "Темний",
+    "uplifting": "Піднесений",
+    "mysterious": "Таємничий"
+  },
+  "starRating": {
+    "starLabel": "Оцінка {star} з 5",
+    "ratingLabel": "Оцінка: {value} з 5"
   }
 }

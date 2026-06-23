@@ -1,4 +1,5 @@
 import {BadgeCheck} from "lucide-react";
+import {useTranslations} from "next-intl";
 import {cx} from "@/lib/cx";
 import styles from "./Badge.module.css";
 
@@ -11,29 +12,28 @@ interface BadgeProps {
 }
 
 export function Badge({children, variant = "default", className}: BadgeProps) {
-    return <span className={cx(styles.badge, styles[variant], className)}>{children}</span>;
-}
-
-export function VerifiedBadge() {
     return (
-        <span className={styles.verified}>
-      <BadgeCheck size={11}/>
-      Підтверджений автор
-    </span>
+        <span className={cx(styles.badge, styles[variant], className)}>
+            {children}
+        </span>
     );
 }
 
-const MOOD_LABELS: Record<string, string> = {
-    epic: "Епічний",
-    sad: "Меланхолійний",
-    calm: "Спокійний",
-    tense: "Напружений",
-    romantic: "Романтичний",
-    dark: "Темний",
-    uplifting: "Піднесений",
-    mysterious: "Таємничий",
-};
+export function VerifiedBadge() {
+    const t = useTranslations("badges");
+
+    return (
+        <span className={styles.verified}>
+            <BadgeCheck size={11} aria-hidden/>
+            {t("verifiedAuthor")}
+        </span>
+    );
+}
 
 export function MoodBadge({mood}: { mood: string }) {
-    return <Badge variant="default">{MOOD_LABELS[mood] ?? mood}</Badge>;
+    const t = useTranslations("moods");
+
+    return (
+        <Badge variant="default">{t(mood, {defaultValue: mood})}</Badge>
+    );
 }

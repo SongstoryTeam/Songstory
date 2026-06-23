@@ -4,6 +4,7 @@ import {useRouter} from "next/navigation";
 import {useState} from "react";
 import Link from "next/link";
 import {Search, Menu, Plus, Bell} from "lucide-react";
+import {useTranslations} from "next-intl";
 import {useAuthStore} from "@/store/auth.store";
 import {useDebouncedCallback} from "@/lib/hooks";
 import styles from "./TopBar.module.css";
@@ -14,6 +15,7 @@ interface TopBarProps {
 }
 
 export function TopBar({locale, onMenuClick}: TopBarProps) {
+    const t = useTranslations("topbar");
     const router = useRouter();
     const {isAuthenticated} = useAuthStore();
     const [query, setQuery] = useState("");
@@ -38,18 +40,19 @@ export function TopBar({locale, onMenuClick}: TopBarProps) {
 
     return (
         <header className={styles.topbar}>
-            <button onClick={onMenuClick} aria-label="Відкрити меню" className={styles.menuButton}>
-                <Menu size={20}/>
+            <button onClick={onMenuClick} aria-label={t("openMenu")} className={styles.menuButton}>
+                <Menu size={20} aria-hidden/>
             </button>
 
-            <form onSubmit={handleSubmit} className={styles.search}>
-                <Search size={16} className={styles.searchIcon}/>
+            <form onSubmit={handleSubmit} className={styles.search} role="search">
+                <Search size={16} className={styles.searchIcon} aria-hidden/>
                 <input
-                    type="text"
+                    type="search"
                     value={query}
                     onChange={handleChange}
-                    placeholder="Пошук книг або авторів…"
+                    placeholder={t("searchPlaceholder")}
                     className={styles.searchInput}
+                    aria-label={t("searchLabel")}
                 />
             </form>
 
@@ -57,22 +60,23 @@ export function TopBar({locale, onMenuClick}: TopBarProps) {
 
             <div className={styles.actions}>
                 {isAuthenticated && (
-                    <Link href={`/${locale}/notifications`} aria-label="Сповіщення" className={styles.iconButton}>
-                        <Bell size={16}/>
+                    <Link href={`/${locale}/notifications`} aria-label={t("notifications")}
+                          className={styles.iconButton}>
+                        <Bell size={16} aria-hidden/>
                     </Link>
                 )}
                 {isAuthenticated ? (
                     <Link href={`/${locale}/book/create`} className={styles.createButton}>
-                        <Plus size={15}/>
-                        Додати книгу
+                        <Plus size={15} aria-hidden/>
+                        {t("addBook")}
                     </Link>
                 ) : (
                     <>
                         <Link href={`/${locale}/login`} className={styles.loginLink}>
-                            Увійти
+                            {t("login")}
                         </Link>
                         <Link href={`/${locale}/signup`} className={styles.signupLink}>
-                            Реєстрація
+                            {t("signup")}
                         </Link>
                     </>
                 )}
