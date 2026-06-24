@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, BookOpen, Plus } from "lucide-react";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { MusicCard } from "@/components/music/MusicCard";
-import { Comments } from "@/components/ui/Comments";
+// import { Comments } from "@/components/ui/Comments";
 import { VerifiedBadge } from "@/components/ui/Badge/Badge";
 import { serverFetch } from "@/lib/api/server-fetch";
 
@@ -310,10 +310,10 @@ export default async function ChapterDetailPage({ params }: Props) {
       ) : null}
 
       {/* Comments */}
-      <Comments
-        initialComments={comments as never}
-        chapterId={chapter.id}
-      />
+      {/*<Comments*/}
+      {/*  initialComments={comments as never}*/}
+      {/*  chapterId={chapter.id}*/}
+      {/*/>*/}
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { Heart, Calendar, ExternalLink, Play, Music } from "lucide-react";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { Comments } from "@/components/ui/Comments";
+// import { Comments } from "@/components/ui/Comments";
 import { serverFetch } from "@/lib/api/server-fetch";
 import { PlaylistLikeButton } from "./PlaylistLikeButton";
 
