@@ -1,31 +1,52 @@
-import Image from "next/image";
-import {useTranslations} from "next-intl";
-import styles from "./BookCover.module.css";
+import Link from "next/link";
+import {ListMusic, ChevronRight} from "lucide-react";
+import styles from "./ChapterCard.module.css";
+import {cx} from "@/lib/cx";
 
-interface BookCoverProps {
-    src: string | null;
+interface Chapter {
+    id: number;
+    number: number;
     title: string;
-    width?: number;
-    height?: number;
+    description: string;
+    moodTags: string;
+    isApproved: boolean;
+    musicCount: number;
 }
 
-export function BookCover({src, title, width = 200, height = 300}: BookCoverProps) {
-    const t = useTranslations("book");
+interface ChapterCardProps {
+    chapter: Chapter;
+    bookSlug: string;
+    locale: string;
+}
 
+export function ChapterCard({chapter, bookSlug, locale}: ChapterCardProps) {
     return (
-        <div className={styles.wrap} style={{width, height}}>
-            {src ? (
-                <Image
-                    src={src}
-                    alt={t("coverAlt", {title})}
-                    fill
-                    sizes={`${width}px`}
-                    className={styles.image}
-                />
-            ) : (
-                <div className={styles.noCover}>{title}</div>
+        <Link
+            href={`/${locale}/book/${bookSlug}/chapter/${chapter.number}`}
+            className={cx(styles.card, !chapter.isApproved && styles.cardPending)}
+        >
+            <span className={styles.number}>{chapter.number}</span>
+
+            <div className={styles.info}>
+                <div className={styles.titleRow}>
+                    <span className={styles.title}>{chapter.title}</span>
+                </div>
+
+                {(chapter.moodTags || chapter.description) && (
+                    <p className={cx(styles.subtitle, chapter.moodTags ? styles.subtitleMood : styles.subtitleDesc)}>
+                        {chapter.moodTags || chapter.description}
+                    </p>
+                )}
+            </div>
+
+            {chapter.musicCount > 0 && (
+                <span className={styles.musicCount}>
+          <ListMusic size={12}/>
+                    {chapter.musicCount}
+        </span>
             )}
-            <div aria-hidden className={styles.spine}/>
-        </div>
+
+            <ChevronRight size={16} className={styles.chevron}/>
+        </Link>
     );
 }
